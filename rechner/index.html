@@ -13,28 +13,35 @@
 <meta property="og:title" content="Balkonkraftwerk-Rechner: Ertrag, Ersparnis &amp; Amortisation | Dein Kraftwerk">
 <meta property="og:description" content="Kostenloser Balkonkraftwerk-Rechner: Schätze Jahresertrag, Ersparnis und Amortisation für deinen Balkon – mit Ausrichtung, Neigung, Strompreis und optionalem Speicher.">
 <meta property="og:url" content="https://kraftwerk-balkon.de/rechner/">
-<meta property="og:image" content="https://kraftwerk-balkon.de/images/sammelband-cover.jpg">
-<meta name="theme-color" content="#123a56">
+<meta property="og:image" content="https://kraftwerk-balkon.de/images/foto/hero.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/css/style.css?v=2026-10-16">
+<link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style.css?v=202610162137">
 <link rel="alternate" type="application/rss+xml" title="Balkonkraftwerk-News" href="/news/feed.xml">
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
-<header class="nav">
-  <a href="/" class="brand"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#F2C94C"/></svg><span>Dein Kraftwerk</span></a>
-  <nav class="navlinks" aria-label="Hauptnavigation"><a href="/ratgeber/">Ratgeber</a><a href="/rechner/" aria-current=page>Rechner</a><a href="/ratgeber/balkonkraftwerk-kaufen-checkliste/">Kaufberatung</a><a href="/news/">News</a><a href="/buecher/">Bücher</a></nav>
+<header class="site-header">
+  <div class="wrap hdr">
+    <a href="/" class="brand"><span class="brand-mark"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#3a2a00"/></svg></span><span>Dein Kraftwerk</span></a>
+    <nav class="navlinks" aria-label="Hauptnavigation"><a href="/ratgeber/">Ratgeber</a><a href="/rechner/" aria-current=page>Rechner</a><a href="/ratgeber/balkonkraftwerk-kaufen-checkliste/">Kaufberatung</a><a href="/news/">News</a><a href="/buecher/">Bücher</a></nav>
+    <div class="hdr-cta">
+      <a href="/rechner/" class="btn btn-dark btn-sm">Ertrag berechnen</a>
+      <details class="menu"><summary aria-label="Menü öffnen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f1f17" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+        <nav class="menu-panel" aria-label="Mobile Navigation"><a href="/ratgeber/">Ratgeber</a><a href="/rechner/" aria-current=page>Rechner</a><a href="/ratgeber/balkonkraftwerk-kaufen-checkliste/">Kaufberatung</a><a href="/news/">News</a><a href="/buecher/">Bücher</a><a href="/rechner/">Ertragsrechner</a></nav>
+      </details>
+    </div>
+  </div>
 </header>
 <main id="main">
-
-<section class="wrap page-head">
-  <span class="badge"><span class="dot"></span>Kostenlos · ohne Anmeldung · keine Datenspeicherung</span>
-  <h1>Balkonkraftwerk-Rechner</h1>
-  <p class="lead">Wie viel Strom erzeugt dein Balkonkraftwerk, wie viel sparst du – und wann hat es sich bezahlt gemacht? Stell die Werte für deinen Balkon ein.</p>
+<section class="page-hero"><img src="/images/foto/abend.webp" srcset="/images/foto/abend-800.webp 800w, /images/foto/abend.webp 1400w" sizes="100vw" width="1400" height="934" alt="Solarmodul im warmen Abendlicht" fetchpriority="high">
+  <div class="wrap"><span class="eyebrow"><span class="dot"></span>Kostenlos · ohne Anmeldung · keine Datenspeicherung</span><h1>Balkonkraftwerk-Rechner</h1><p class="lead">Wie viel Strom erzeugt dein Balkonkraftwerk, wie viel sparst du – und wann hat es sich bezahlt gemacht? Stell die Werte für deinen Balkon ein.</p></div>
 </section>
 <section class="wrap">
   <div class="calc">
-    <form class="card" id="calc" onsubmit="return false">
+    <form id="calc" onsubmit="return false">
       <label for="wp">Modulleistung gesamt (Wp)</label>
       <select id="wp">
         <option value="400">400 Wp (1 Modul)</option>
@@ -91,33 +98,35 @@
         </dl>
         <p class="small" id="r-hint" style="margin-top:14px;color:#d5e3ee"></p>
       </div>
-      <div class="card small" style="margin-top:16px">
+      <div class="card small" style="margin-top:16px;font-size:14px;line-height:1.6">
         <strong>So rechnen wir:</strong> Ertrag = Modulleistung × spezifischer Ertrag (Richtwerte je Ausrichtung/Neigung, ca. 1.000 kWh/kWp bei Süd 30°) × Region × Verschattung, abzüglich Begrenzungsverlusten durch die 800-W-Grenze bei großer Modulleistung. Eigenverbrauch nach typischen Lastprofilen, mit Speicher zusätzlich verschobene Energie (150–250 Zyklen/Jahr, 90 % Wirkungsgrad). Strompreissteigerungen sind nicht eingerechnet. Alle Werte sind Schätzungen – für genaue Standortprognosen empfehlen wir <a href="https://re.jrc.ec.europa.eu/pvg_tools/de/" target="_blank" rel="noopener">PVGIS</a>.
       </div>
     </div>
   </div>
   <div class="narrow">
     <div class="product-grid"><div class="product">
+  <span class="p-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0c6b41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L22 7H6"/></svg></span>
   <strong>Komplettset 800 W (2 Module + Wechselrichter)</strong>
   <p>Der einfachste Einstieg: alles in einem Paket, passend zur 800-W-Grenze. Auf Schuko-Stecker mit Normhinweis DIN VDE V 0126-95 achten.</p>
-  <a href="https://www.amazon.de/s?k=Balkonkraftwerk+800W+Komplettset&amp;tag=feinerbengel-21" class="btn btn-ghost" target="_blank" rel="sponsored noopener">Angebote bei Amazon vergleichen <span class="tag-ad">Anzeige</span></a>
+  <a href="https://www.amazon.de/s?k=Balkonkraftwerk+800W+Komplettset&amp;tag=feinerbengel-21" class="btn btn-ghost btn-sm" target="_blank" rel="sponsored noopener">Angebote vergleichen <span class="tag-ad">Anzeige</span></a>
 </div><div class="product">
+  <span class="p-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0c6b41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L22 7H6"/></svg></span>
   <strong>Balkonkraftwerk-Set mit Speicher</strong>
   <p>Sinnvoll, wenn mittags niemand zu Hause ist und viel Strom ungenutzt ins Netz fließt.</p>
-  <a href="https://www.amazon.de/s?k=Balkonkraftwerk+mit+Speicher+Set&amp;tag=feinerbengel-21" class="btn btn-ghost" target="_blank" rel="sponsored noopener">Angebote bei Amazon vergleichen <span class="tag-ad">Anzeige</span></a>
+  <a href="https://www.amazon.de/s?k=Balkonkraftwerk+mit+Speicher+Set&amp;tag=feinerbengel-21" class="btn btn-ghost btn-sm" target="_blank" rel="sponsored noopener">Angebote vergleichen <span class="tag-ad">Anzeige</span></a>
 </div><div class="product">
+  <span class="p-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0c6b41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L22 7H6"/></svg></span>
   <strong>Aufständerung für Flachdach, Garage oder Garten</strong>
   <p>Mit 20–30° Neigung holst du deutlich mehr Ertrag als senkrecht am Geländer.</p>
-  <a href="https://www.amazon.de/s?k=Solarmodul+Aufst%C3%A4nderung+Flachdach+Balkonkraftwerk&amp;tag=feinerbengel-21" class="btn btn-ghost" target="_blank" rel="sponsored noopener">Angebote bei Amazon vergleichen <span class="tag-ad">Anzeige</span></a>
+  <a href="https://www.amazon.de/s?k=Solarmodul+Aufst%C3%A4nderung+Flachdach+Balkonkraftwerk&amp;tag=feinerbengel-21" class="btn btn-ghost btn-sm" target="_blank" rel="sponsored noopener">Angebote vergleichen <span class="tag-ad">Anzeige</span></a>
 </div></div>
     <aside class="book-box">
-  <img src="/images/band1-cover.jpg" alt="Cover: Dein eigenes Kraftwerk am Geländer" width="110" height="165" loading="lazy">
+  <img src="/images/band1-cover.jpg" alt="Cover: Dein eigenes Kraftwerk am Geländer" width="120" height="180" loading="lazy">
   <div>
-    <span class="kicker">STUFE 1 · EINSTEIGER · Buch von Alexander Gerasch</span>
+    <span class="kicker">STUFE 1 · EINSTEIGER · Das Buch zum Thema</span>
     <h3>Dein eigenes Kraftwerk am Geländer</h3>
     <p>Technik und Komponenten, Anmeldung im Marktstammdatenregister, Mietrecht und Versicherung, Standortplanung, Installation und Wirtschaftlichkeit – Schritt für Schritt bis zur ersten eigenen Kilowattstunde.</p>
-    <p class="muted small">Für alle, die noch kein Balkonkraftwerk haben oder gerade eins gekauft haben.</p>
-    <a href="https://www.amazon.de/dp/B0GHZGVGWY?tag=feinerbengel-21" class="btn btn-primary" target="_blank" rel="sponsored noopener">Als E-Book bei Amazon ansehen <span class="tag-ad">Anzeige</span></a>
+    <a href="https://www.amazon.de/dp/B0GHZGVGWY?tag=feinerbengel-21" class="btn btn-primary btn-sm" target="_blank" rel="sponsored noopener">Als E-Book bei Amazon ansehen <span class="tag-ad">Anzeige</span></a>
   </div>
 </aside>
   </div>
@@ -126,25 +135,33 @@
 
 </main>
 <footer>
-  <div class="wrap footer-grid">
-    <div>
-      <strong>Dein Kraftwerk</strong>
-      <p class="muted small">Der unabhängige Balkonkraftwerk-Ratgeber. Unabhängig, ohne Herstellerbindung, regelmäßig aktualisiert.</p>
-      <p class="muted small">* Links mit „Anzeige“ sind Affiliate-Links: Kaufst du darüber, erhalte ich eine kleine Provision. Für dich ändert sich am Preis nichts. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-brand"><span class="brand-mark"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#3a2a00"/></svg></span>Dein Kraftwerk</div>
+        <p class="small">Der unabhängige Balkonkraftwerk-Ratgeber. Unabhängig, ohne Herstellerbindung, jede Woche auf dem aktuellen Stand.</p>
+        <p class="small" style="opacity:.75">Links mit „Anzeige“ sind Affiliate-Links: Kaufst du darüber, erhalte ich eine kleine Provision. Für dich ändert sich am Preis nichts. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
+      </div>
+      <div><h4>Ratgeber</h4><ul>
+        <li><a href="/ratgeber/balkonkraftwerk-regeln-2026/">Regeln 2026</a></li>
+        <li><a href="/ratgeber/balkonkraftwerk-anmelden/">Anmeldung</a></li>
+        <li><a href="/ratgeber/balkonkraftwerk-kaufen-checkliste/">Kauf-Checkliste</a></li>
+        <li><a href="/ratgeber/balkonkraftwerk-speicher-lohnt-sich/">Speicher</a></li>
+        <li><a href="/ratgeber/">Alle Ratgeber</a></li></ul></div>
+      <div><h4>Werkzeuge</h4><ul>
+        <li><a href="/rechner/">Ertragsrechner</a></li>
+        <li><a href="/news/">News</a></li>
+        <li><a href="/buecher/">Bücher</a></li>
+        <li><a href="/news/feed.xml">RSS-Feed</a></li></ul></div>
+      <div><h4>Über uns</h4><ul>
+        <li><a href="/autor/">Über den Autor</a></li>
+        <li><a href="/so-arbeiten-wir/">So arbeiten wir</a></li>
+        <li><a href="https://www.instagram.com/dein.kraftwerk.buch/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/datenschutz/">Datenschutz</a></li></ul></div>
     </div>
-    <div class="footer-links">
-      <a href="/ratgeber/">Alle Ratgeber</a>
-      <a href="/rechner/">Ertragsrechner</a>
-      <a href="/news/">News</a>
-      <a href="/buecher/">Bücher</a>
-      <a href="/autor/">Über den Autor</a>
-      <a href="/so-arbeiten-wir/">So arbeiten wir</a>
-      <a href="https://www.instagram.com/dein.kraftwerk.buch/" target="_blank" rel="noopener">Instagram @dein.kraftwerk.buch</a>
-      <a href="/impressum/">Impressum</a>
-      <a href="/datenschutz/">Datenschutz</a>
-    </div>
+    <div class="f-bottom"><span>© 2026 Alexander Gerasch · Fotos: Unsplash</span><span>Zuletzt aktualisiert: 16. Oktober 2026</span></div>
   </div>
-  <div class="wrap muted small" style="margin-top:18px">© 2026 Alexander Gerasch · Zuletzt aktualisiert: 16. Oktober 2026</div>
 </footer>
 </body>
 </html>

@@ -13,50 +13,64 @@
 <meta property="og:title" content="Balkonkraftwerk Smart Home: Shelly &amp; Home Assistant">
 <meta property="og:description" content="Mehr Eigenverbrauch durch Automatisierung: So steuerst du Geräte nach Solarstrom – vom einfachen Shelly-Zeitplan bis Home Assistant und dynamischem Stromtarif.">
 <meta property="og:url" content="https://kraftwerk-balkon.de/ratgeber/balkonkraftwerk-smart-home-einstieg/">
-<meta property="og:image" content="https://kraftwerk-balkon.de/images/sammelband-cover.jpg">
-<meta name="theme-color" content="#123a56">
+<meta property="og:image" content="https://kraftwerk-balkon.de/images/foto/smarthome.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/css/style.css?v=2026-10-16">
+<link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style.css?v=202610162137">
 <link rel="alternate" type="application/rss+xml" title="Balkonkraftwerk-News" href="/news/feed.xml">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Balkonkraftwerk und Smart Home: Der Einstieg mit Shelly und Home Assistant", "description": "Mehr Eigenverbrauch durch Automatisierung: So steuerst du Geräte nach Solarstrom – vom einfachen Shelly-Zeitplan bis Home Assistant und dynamischem Stromtarif.", "datePublished": "2026-10-16", "dateModified": "2026-10-16", "inLanguage": "de-DE", "author": {"@type": "Person", "name": "Alexander Gerasch", "url": "https://kraftwerk-balkon.de/autor/"}, "publisher": {"@type": "Organization", "name": "Dein Kraftwerk", "url": "https://kraftwerk-balkon.de"}, "mainEntityOfPage": "https://kraftwerk-balkon.de/ratgeber/balkonkraftwerk-smart-home-einstieg/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Balkonkraftwerk und Smart Home: Der Einstieg mit Shelly und Home Assistant", "description": "Mehr Eigenverbrauch durch Automatisierung: So steuerst du Geräte nach Solarstrom – vom einfachen Shelly-Zeitplan bis Home Assistant und dynamischem Stromtarif.", "image": "https://kraftwerk-balkon.de/images/foto/smarthome.webp", "datePublished": "2026-10-16", "dateModified": "2026-10-16", "inLanguage": "de-DE", "author": {"@type": "Person", "name": "Alexander Gerasch", "url": "https://kraftwerk-balkon.de/autor/"}, "publisher": {"@type": "Organization", "name": "Dein Kraftwerk", "url": "https://kraftwerk-balkon.de"}, "mainEntityOfPage": "https://kraftwerk-balkon.de/ratgeber/balkonkraftwerk-smart-home-einstieg/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Start", "item": "https://kraftwerk-balkon.de/"}, {"@type": "ListItem", "position": 2, "name": "Ratgeber", "item": "https://kraftwerk-balkon.de/ratgeber/"}, {"@type": "ListItem", "position": 3, "name": "Balkonkraftwerk und Smart Home: Der Einstieg mit Shelly und Home Assistant", "item": "https://kraftwerk-balkon.de/ratgeber/balkonkraftwerk-smart-home-einstieg/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Brauche ich Home Assistant für mein Balkonkraftwerk?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Für den Anfang reicht eine Messsteckdose mit App. Home Assistant lohnt sich, wenn du mehrere Geräte, einen Speicher oder einen dynamischen Tarif automatisch zusammenspielen lassen willst."}}, {"@type": "Question", "name": "Funktioniert das ohne Cloud?", "acceptedAnswer": {"@type": "Answer", "text": "Viele Geräte, etwa von Shelly, lassen sich lokal im Heimnetz steuern. Home Assistant läuft auf einem eigenen kleinen Rechner bei dir zu Hause."}}, {"@type": "Question", "name": "Was ist ein dynamischer Stromtarif?", "acceptedAnswer": {"@type": "Answer", "text": "Der Strompreis ändert sich stündlich oder viertelstündlich mit dem Börsenpreis. Seit 2025 müssen alle Stromlieferanten einen solchen Tarif anbieten. Du brauchst dafür ein intelligentes Messsystem (Smart Meter)."}}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
-<header class="nav">
-  <a href="/" class="brand"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#F2C94C"/></svg><span>Dein Kraftwerk</span></a>
-  <nav class="navlinks" aria-label="Hauptnavigation"><a href="/ratgeber/" aria-current=page>Ratgeber</a><a href="/rechner/">Rechner</a><a href="/ratgeber/balkonkraftwerk-kaufen-checkliste/">Kaufberatung</a><a href="/news/">News</a><a href="/buecher/">Bücher</a></nav>
+<header class="site-header">
+  <div class="wrap hdr">
+    <a href="/" class="brand"><span class="brand-mark"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#3a2a00"/></svg></span><span>Dein Kraftwerk</span></a>
+    <nav class="navlinks" aria-label="Hauptnavigation"><a href="/ratgeber/" aria-current=page>Ratgeber</a><a href="/rechner/">Rechner</a><a href="/ratgeber/balkonkraftwerk-kaufen-checkliste/">Kaufberatung</a><a href="/news/">News</a><a href="/buecher/">Bücher</a></nav>
+    <div class="hdr-cta">
+      <a href="/rechner/" class="btn btn-dark btn-sm">Ertrag berechnen</a>
+      <details class="menu"><summary aria-label="Menü öffnen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f1f17" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+        <nav class="menu-panel" aria-label="Mobile Navigation"><a href="/ratgeber/" aria-current=page>Ratgeber</a><a href="/rechner/">Rechner</a><a href="/ratgeber/balkonkraftwerk-kaufen-checkliste/">Kaufberatung</a><a href="/news/">News</a><a href="/buecher/">Bücher</a><a href="/rechner/">Ertragsrechner</a></nav>
+      </details>
+    </div>
+  </div>
 </header>
 <main id="main">
-<article class="wrap article">
-  <nav class="crumbs small"><a href="/">Start</a> › <a href="/ratgeber/">Ratgeber</a> › Smart Home</nav>
-  <header class="article-head">
-    <span class="badge"><span class="dot"></span>Stand: 16. Oktober 2026 · geprüft</span>
-    <h1>Balkonkraftwerk und Smart Home: Der Einstieg mit Shelly und Home Assistant</h1>
-    <p class="lead">Der günstigste Speicher ist ein Gerät, das genau dann läuft, wenn die Sonne scheint. Mit etwas Smart Home holst du aus deinem Balkonkraftwerk mehr heraus – ganz ohne Akku.</p>
-    <p class="byline small muted">Von Alexander Gerasch · veröffentlicht 16. Oktober 2026 · aktualisiert 16. Oktober 2026</p>
-  </header>
-  <div class="article-grid">
-    <div class="prose">
-      <p class="disclosure">Transparenz: Dieser Artikel enthält Affiliate-Links (mit „Anzeige“ markiert). Kaufst du darüber, erhalte ich eine kleine Provision – der Preis bleibt für dich gleich. Empfehlungen sind davon unabhängig.</p>
-      <div class="summary"><strong>Das Wichtigste in Kürze</strong><ul><li><strong>Stufe 1:</strong> Messsteckdose am Balkonkraftwerk – du siehst, was es liefert.</li><li><strong>Stufe 2:</strong> Geräte per Schaltsteckdose bei Überschuss einschalten.</li><li><strong>Stufe 3:</strong> Home Assistant bündelt Zähler, Wechselrichter, Speicher und Tarif.</li><li>Seit 2025 müssen alle Stromlieferanten einen <strong>dynamischen Tarif</strong> anbieten – Voraussetzung ist ein Smart Meter.</li></ul></div>
-      <nav class="toc" aria-label="Inhalt"><strong>Inhalt</strong><ol><li><a href="#warum-automatisierung-den-ertrag-steigert">Warum Automatisierung den Ertrag steigert</a></li><li><a href="#stufe-1-messen">Stufe 1: Messen</a></li><li><a href="#stufe-2-schalten-nach-sonne">Stufe 2: Schalten nach Sonne</a></li><li><a href="#stufe-3-home-assistant-als-energie-zentrale">Stufe 3: Home Assistant als Energie-Zentrale</a></li><li><a href="#dynamische-stromtarife-der-naechste-schritt">Dynamische Stromtarife: der nächste Schritt</a></li><li><a href="#faq">Häufige Fragen</a></li></ol></nav>
-      
+<article>
+  <div class="wrap">
+    <header class="art-head">
+      <nav class="crumbs"><a href="/">Start</a> › <a href="/ratgeber/">Ratgeber</a> › Smart Home</nav>
+      <span class="kicker">Smart Home</span>
+      <h1 style="margin-top:10px">Balkonkraftwerk und Smart Home: Der Einstieg mit Shelly und Home Assistant</h1>
+      <p class="lead">Der günstigste Speicher ist ein Gerät, das genau dann läuft, wenn die Sonne scheint. Mit etwas Smart Home holst du aus deinem Balkonkraftwerk mehr heraus – ganz ohne Akku.</p>
+      <div class="byline"><span class="avatar">AG</span><span><strong style="color:var(--ink)">Alexander Gerasch</strong><br>aktualisiert 16. Oktober 2026 · 3 Min. Lesezeit</span><span class="pill-ok">✓ Rechtsstand geprüft</span></div>
+    </header>
+    <div class="art-hero"><img src="/images/foto/smarthome.webp" srcset="/images/foto/smarthome-800.webp 800w, /images/foto/smarthome.webp 1400w" sizes="(max-width: 1200px) 100vw, 1160px" width="1400" height="934" alt="Hand hält ein Smartphone mit Energie-App" fetchpriority="high"></div>
+    <p class="credit">Foto: <a href="https://unsplash.com/de/fotos/eine-person-die-ein-smartphone-in-der-hand-halt-sLrBDMlyyO8" target="_blank" rel="noopener">Unsplash</a></p>
+    <div class="art-grid">
+      <div class="prose">
+        <p class="disclosure">Transparenz: Dieser Artikel enthält Affiliate-Links (mit „Anzeige“ markiert). Kaufst du darüber, erhalte ich eine kleine Provision – der Preis bleibt für dich gleich. Empfehlungen sind davon unabhängig.</p>
+        <div class="summary"><strong>Das Wichtigste in Kürze</strong><ul><li><strong>Stufe 1:</strong> Messsteckdose am Balkonkraftwerk – du siehst, was es liefert.</li><li><strong>Stufe 2:</strong> Geräte per Schaltsteckdose bei Überschuss einschalten.</li><li><strong>Stufe 3:</strong> Home Assistant bündelt Zähler, Wechselrichter, Speicher und Tarif.</li><li>Seit 2025 müssen alle Stromlieferanten einen <strong>dynamischen Tarif</strong> anbieten – Voraussetzung ist ein Smart Meter.</li></ul></div>
+        
 <h2 id="warum-automatisierung-den-ertrag-steigert">Warum Automatisierung den Ertrag steigert</h2>
 <p>Ein Balkonkraftwerk rechnet sich über den Eigenverbrauch. Jedes Gerät, das du von abends auf mittags verschiebst, macht aus unvergütetem Überschuss bares Geld. Von Hand ist das mühsam – automatisch passiert es nebenbei.</p>
 
 <h2 id="stufe-1-messen">Stufe 1: Messen</h2>
 <p>Eine WLAN-Messsteckdose zwischen Balkonkraftwerk und Wandsteckdose zeigt dir in Echtzeit, wie viel Watt ankommen und wie viele kWh die Anlage pro Tag erzeugt. Viele Wechselrichter haben dafür eine eigene App; die Messsteckdose ist trotzdem praktisch, weil sie herstellerunabhängig ist und sich später in Automatisierungen einbinden lässt.</p>
 <div class="product">
+  <span class="p-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0c6b41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L22 7H6"/></svg></span>
   <strong>Messsteckdose (z. B. Shelly Plug S Gen3)</strong>
   <p>Im Buch besprochen. Zeigt, was dein Balkonkraftwerk wirklich liefert, und schaltet Verbraucher bei Sonne.</p>
-  <a href="https://www.amazon.de/dp/B0G1MW1FFF?tag=feinerbengel-21" class="btn btn-ghost" target="_blank" rel="sponsored noopener">Bei Amazon ansehen <span class="tag-ad">Anzeige</span></a>
+  <a href="https://www.amazon.de/dp/B0G1MW1FFF?tag=feinerbengel-21" class="btn btn-ghost btn-sm" target="_blank" rel="sponsored noopener">Bei Amazon ansehen <span class="tag-ad">Anzeige</span></a>
 </div>
 
 <h2 id="stufe-2-schalten-nach-sonne">Stufe 2: Schalten nach Sonne</h2>
 <p>Mit Schaltsteckdosen und einfachen Regeln in der Hersteller-App lassen sich Geräte mittags einschalten: Ladegeräte, ein Luftentfeuchter, die Poolpumpe oder der Warmwasserboiler. Wichtig: Nur Geräte, die das Ein- und Ausschalten am Stecker vertragen. Waschmaschine und Spülmaschine startest du besser über ihre eigene Startzeitvorwahl.</p>
 
+<figure class="figure"><img src="/images/foto/monitor.webp" srcset="/images/foto/monitor-800.webp 800w, /images/foto/monitor.webp 1400w" sizes="(max-width: 800px) 100vw, 740px" width="1400" height="1050" alt="Energie-Monitor zeigt den aktuellen Stromverbrauch" loading="lazy" decoding="async"><figcaption>Ein Energie-Display zeigt auf einen Blick, wann sich das Einschalten lohnt.</figcaption></figure>
 <h2 id="stufe-3-home-assistant-als-energie-zentrale">Stufe 3: Home Assistant als Energie-Zentrale</h2>
 <p>Home Assistant ist eine kostenlose Smart-Home-Software, die lokal bei dir läuft. Ihr Energie-Dashboard zeigt Erzeugung, Bezug, Einspeisung und Speicher übersichtlich an. Mit Automatisierungen kannst du zum Beispiel:</p>
 <ul>
@@ -66,78 +80,104 @@
 </ul>
 <p>Für den Zählerstand brauchst du einen Lesekopf am digitalen Zähler oder ein Energiemessgerät im Sicherungskasten (das gehört in die Hände einer Elektrofachkraft).</p>
 <div class="product-grid"><div class="product">
+  <span class="p-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0c6b41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L22 7H6"/></svg></span>
   <strong>Lesekopf / Energiemessgerät für den Stromzähler</strong>
   <p>Liest deinen Zähler aus – Grundlage für Nulleinspeisung und Speichersteuerung.</p>
-  <a href="https://www.amazon.de/s?k=IR+Lesekopf+Stromz%C3%A4hler+WLAN&amp;tag=feinerbengel-21" class="btn btn-ghost" target="_blank" rel="sponsored noopener">Angebote bei Amazon vergleichen <span class="tag-ad">Anzeige</span></a>
+  <a href="https://www.amazon.de/s?k=IR+Lesekopf+Stromz%C3%A4hler+WLAN&amp;tag=feinerbengel-21" class="btn btn-ghost btn-sm" target="_blank" rel="sponsored noopener">Angebote vergleichen <span class="tag-ad">Anzeige</span></a>
 </div><div class="product">
+  <span class="p-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0c6b41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L22 7H6"/></svg></span>
   <strong>Messsteckdose (z. B. Shelly Plug S Gen3)</strong>
   <p>Im Buch besprochen. Zeigt, was dein Balkonkraftwerk wirklich liefert, und schaltet Verbraucher bei Sonne.</p>
-  <a href="https://www.amazon.de/dp/B0G1MW1FFF?tag=feinerbengel-21" class="btn btn-ghost" target="_blank" rel="sponsored noopener">Bei Amazon ansehen <span class="tag-ad">Anzeige</span></a>
+  <a href="https://www.amazon.de/dp/B0G1MW1FFF?tag=feinerbengel-21" class="btn btn-ghost btn-sm" target="_blank" rel="sponsored noopener">Bei Amazon ansehen <span class="tag-ad">Anzeige</span></a>
 </div></div>
 
 <h2 id="dynamische-stromtarife-der-naechste-schritt">Dynamische Stromtarife: der nächste Schritt</h2>
 <p>Seit 2025 muss jeder Stromlieferant einen dynamischen Tarif anbieten. Der Preis folgt dann dem Börsenstrompreis, der mittags bei viel Solarstrom oft sehr niedrig ist und abends steigt. Zusammen mit Balkonkraftwerk und Speicher entsteht so ein kleines Energiemanagement-System. Voraussetzung ist ein intelligentes Messsystem; ob sich der Tarif für dich lohnt, hängt von deinem Verbrauchsprofil ab.</p>
 <div class="box info">Das ist das Thema von Band 3 der Buchreihe: Home Assistant, Shelly, dynamische Tarife und eine Winter-Strategie – Schritt für Schritt für Einsteiger.</div>
 
-      <aside class="book-box">
-  <img src="/images/band3-cover.jpg" alt="Cover: Das smarte Sonnen-Haus" width="110" height="165" loading="lazy">
+        <aside class="book-box">
+  <img src="/images/band3-cover.jpg" alt="Cover: Das smarte Sonnen-Haus" width="120" height="180" loading="lazy">
   <div>
-    <span class="kicker">STUFE 3 · SMART HOME · Buch von Alexander Gerasch</span>
+    <span class="kicker">STUFE 3 · SMART HOME · Das Buch zum Thema</span>
     <h3>Das smarte Sonnen-Haus</h3>
     <p>Home Assistant und Shelly, dynamische Stromtarife, Winter-Strategie, intelligente Laststeuerung und Solarthermie – dein Zuhause verbraucht Strom dann, wenn er billig ist.</p>
-    <p class="muted small">Für alle, die Verbrauch, Speicher und Tarif automatisch zusammenspielen lassen wollen.</p>
-    <a href="https://www.amazon.de/dp/B0GHZG7LVG?tag=feinerbengel-21" class="btn btn-primary" target="_blank" rel="sponsored noopener">Als E-Book bei Amazon ansehen <span class="tag-ad">Anzeige</span></a>
+    <a href="https://www.amazon.de/dp/B0GHZG7LVG?tag=feinerbengel-21" class="btn btn-primary btn-sm" target="_blank" rel="sponsored noopener">Als E-Book bei Amazon ansehen <span class="tag-ad">Anzeige</span></a>
   </div>
 </aside>
-      <section id="faq"><h2>Häufige Fragen</h2><details><summary>Brauche ich Home Assistant für mein Balkonkraftwerk?</summary><p>Nein. Für den Anfang reicht eine Messsteckdose mit App. Home Assistant lohnt sich, wenn du mehrere Geräte, einen Speicher oder einen dynamischen Tarif automatisch zusammenspielen lassen willst.</p></details><details><summary>Funktioniert das ohne Cloud?</summary><p>Viele Geräte, etwa von Shelly, lassen sich lokal im Heimnetz steuern. Home Assistant läuft auf einem eigenen kleinen Rechner bei dir zu Hause.</p></details><details><summary>Was ist ein dynamischer Stromtarif?</summary><p>Der Strompreis ändert sich stündlich oder viertelstündlich mit dem Börsenpreis. Seit 2025 müssen alle Stromlieferanten einen solchen Tarif anbieten. Du brauchst dafür ein intelligentes Messsystem (Smart Meter).</p></details></section>
-      <section class="sources"><h2 id="quellen">Quellen</h2><ul><li><a href="https://www.home-assistant.io/docs/energy/" target="_blank" rel="noopener">Home Assistant: Energy Management</a></li><li><a href="https://www.bundesnetzagentur.de/DE/Vportal/Energie/Vertragsarten/DynamischerTarif/start.html" target="_blank" rel="noopener">Bundesnetzagentur: Dynamische Stromtarife</a></li></ul></section>
-      
-      <p class="note">Dieser Ratgeber ersetzt keine Rechts- oder Elektro-Fachberatung. Vorschriften ändern sich – wir prüfen die Inhalte regelmäßig, zuletzt am 16. Oktober 2026.</p>
-      <div class="author-box">
+        <section id="faq"><h2>Häufige Fragen</h2><details><summary>Brauche ich Home Assistant für mein Balkonkraftwerk?</summary><p>Nein. Für den Anfang reicht eine Messsteckdose mit App. Home Assistant lohnt sich, wenn du mehrere Geräte, einen Speicher oder einen dynamischen Tarif automatisch zusammenspielen lassen willst.</p></details><details><summary>Funktioniert das ohne Cloud?</summary><p>Viele Geräte, etwa von Shelly, lassen sich lokal im Heimnetz steuern. Home Assistant läuft auf einem eigenen kleinen Rechner bei dir zu Hause.</p></details><details><summary>Was ist ein dynamischer Stromtarif?</summary><p>Der Strompreis ändert sich stündlich oder viertelstündlich mit dem Börsenpreis. Seit 2025 müssen alle Stromlieferanten einen solchen Tarif anbieten. Du brauchst dafür ein intelligentes Messsystem (Smart Meter).</p></details></section>
+        <section class="sources"><h2 id="quellen">Quellen</h2><ul><li><a href="https://www.home-assistant.io/docs/energy/" target="_blank" rel="noopener">Home Assistant: Energy Management</a></li><li><a href="https://www.bundesnetzagentur.de/DE/Vportal/Energie/Vertragsarten/DynamischerTarif/start.html" target="_blank" rel="noopener">Bundesnetzagentur: Dynamische Stromtarife</a></li></ul></section>
+        
+        <p class="note">Dieser Ratgeber ersetzt keine Rechts- oder Elektro-Fachberatung. Vorschriften ändern sich – wir prüfen die Inhalte regelmäßig, zuletzt am 16. Oktober 2026.</p>
+        <div class="author-box">
   <div class="avatar" aria-hidden="true">AG</div>
-  <div><strong>Alexander Gerasch</strong> – Autor der Buchreihe „Dein eigenes Kraftwerk am Geländer“.
-  Schreibt Einsteiger-Ratgeber ohne Fachchinesisch. <a href="/so-arbeiten-wir/">So entstehen unsere Artikel</a>.</div>
+  <div><strong>Alexander Gerasch</strong> – Autor der Buchreihe „Dein eigenes Kraftwerk am Geländer“. Schreibt Einsteiger-Ratgeber ohne Fachchinesisch.
+  <a href="/so-arbeiten-wir/">So entstehen unsere Artikel</a></div>
 </div>
+      </div>
+      <aside class="art-aside"><nav class="toc" aria-label="Inhalt"><strong>Inhalt</strong><ol><li><a href="#warum-automatisierung-den-ertrag-steigert">Warum Automatisierung den Ertrag steigert</a></li><li><a href="#stufe-1-messen">Stufe 1: Messen</a></li><li><a href="#stufe-2-schalten-nach-sonne">Stufe 2: Schalten nach Sonne</a></li><li><a href="#stufe-3-home-assistant-als-energie-zentrale">Stufe 3: Home Assistant als Energie-Zentrale</a></li><li><a href="#dynamische-stromtarife-der-naechste-schritt">Dynamische Stromtarife: der nächste Schritt</a></li><li><a href="#faq">Häufige Fragen</a></li></ol></nav><div class="aside-book">
+  <img src="/images/band3-cover.jpg" alt="Cover: Das smarte Sonnen-Haus" width="120" height="180" loading="lazy">
+  <span class="kicker">Band 3 der Buchreihe</span>
+  <strong>Das smarte Sonnen-Haus</strong>
+  <p>Für alle, die Verbrauch, Speicher und Tarif automatisch zusammenspielen lassen wollen.</p>
+  <a href="https://www.amazon.de/dp/B0GHZG7LVG?tag=feinerbengel-21" class="btn btn-primary btn-sm" target="_blank" rel="sponsored noopener">Bei Amazon ansehen <span class="tag-ad">Anzeige</span></a>
+</div></aside>
     </div>
   </div>
-  <section class="related"><h2 id="weiterlesen">Weiterlesen</h2><div class="cards"><a class="acard" href="/ratgeber/balkonkraftwerk-speicher-lohnt-sich/">
-  <span class="kicker">Speicher</span>
-  <strong>Balkonkraftwerk mit Speicher: Lohnt sich der Akku 2026?</strong>
-  <span class="muted small">Lohnt sich ein Speicher fürs Balkonkraftwerk? Ehrliche Rechnung, AC- oder DC-gekoppelt, Nulleinspeisung, Regeln und für wen sich der Akku wirklich rechnet.</span>
-  <span class="small stand">Stand: Oktober 2026</span>
+  <section class="sec sec-soft" style="margin-top:72px"><div class="wrap"><div class="sec-head"><h2>Weiterlesen</h2><a href="/ratgeber/" class="btn btn-ghost btn-sm">Alle Ratgeber <span class="arr">→</span></a></div><div class="cards"><a class="acard" href="/ratgeber/balkonkraftwerk-speicher-lohnt-sich/">
+  <div class="thumb"><img src="/images/foto/speicher.webp" srcset="/images/foto/speicher-800.webp 800w, /images/foto/speicher.webp 1400w" sizes="(max-width: 620px) 100vw, (max-width: 960px) 50vw, 380px" width="1400" height="1050" alt="Balkonkraftwerk mit Speicher: Lohnt sich der Akku 2026?" loading="lazy" decoding="async"></div>
+  <div class="body">
+    <span class="kicker">Speicher</span>
+    <strong>Balkonkraftwerk mit Speicher: Lohnt sich der Akku 2026?</strong>
+    <span class="desc">Lohnt sich ein Speicher fürs Balkonkraftwerk? Ehrliche Rechnung, AC- oder DC-gekoppelt, Nulleinspeisung, Regeln und für wen sich der Akku wirklich rechnet.</span>
+    <span class="meta"><span class="ok">✓ Stand Oktober 2026</span><span>3 Min.</span></span>
+  </div>
 </a><a class="acard" href="/ratgeber/balkonkraftwerk-lohnt-sich/">
-  <span class="kicker">Ertrag &amp; Kosten</span>
-  <strong>Lohnt sich ein Balkonkraftwerk? Die ehrliche Rechnung 2026</strong>
-  <span class="muted small">Lohnt sich ein Balkonkraftwerk 2026? Ertrag, Eigenverbrauch, Ersparnis und Amortisation mit nachvollziehbaren Zahlen – plus Rechner für deinen Balkon.</span>
-  <span class="small stand">Stand: Oktober 2026</span>
+  <div class="thumb"><img src="/images/foto/wand.webp" srcset="/images/foto/wand-800.webp 800w, /images/foto/wand.webp 1400w" sizes="(max-width: 620px) 100vw, (max-width: 960px) 50vw, 380px" width="1400" height="934" alt="Lohnt sich ein Balkonkraftwerk? Die ehrliche Rechnung 2026" loading="lazy" decoding="async"></div>
+  <div class="body">
+    <span class="kicker">Ertrag &amp; Kosten</span>
+    <strong>Lohnt sich ein Balkonkraftwerk? Die ehrliche Rechnung 2026</strong>
+    <span class="desc">Lohnt sich ein Balkonkraftwerk 2026? Ertrag, Eigenverbrauch, Ersparnis und Amortisation mit nachvollziehbaren Zahlen – plus Rechner für deinen Balkon.</span>
+    <span class="meta"><span class="ok">✓ Stand Oktober 2026</span><span>3 Min.</span></span>
+  </div>
 </a><a class="acard" href="/ratgeber/balkonkraftwerk-ausrichtung-ertrag/">
-  <span class="kicker">Ertrag &amp; Kosten</span>
-  <strong>Ausrichtung und Neigung: So holst du mehr Ertrag aus deinem Balkonkraftwerk</strong>
-  <span class="muted small">Süd, Ost-West oder senkrecht? Wie Ausrichtung, Neigung und Verschattung den Ertrag deines Balkonkraftwerks beeinflussen – mit Richtwerten und Praxistipps.</span>
-  <span class="small stand">Stand: Oktober 2026</span>
-</a></div></section>
+  <div class="thumb"><img src="/images/foto/flachdach.webp" srcset="/images/foto/flachdach-800.webp 800w, /images/foto/flachdach.webp 1400w" sizes="(max-width: 620px) 100vw, (max-width: 960px) 50vw, 380px" width="1400" height="934" alt="Ausrichtung und Neigung: So holst du mehr Ertrag aus deinem Balkonkraftwerk" loading="lazy" decoding="async"></div>
+  <div class="body">
+    <span class="kicker">Ertrag &amp; Kosten</span>
+    <strong>Ausrichtung und Neigung: So holst du mehr Ertrag aus deinem Balkonkraftwerk</strong>
+    <span class="desc">Süd, Ost-West oder senkrecht? Wie Ausrichtung, Neigung und Verschattung den Ertrag deines Balkonkraftwerks beeinflussen – mit Richtwerten und Praxistipps.</span>
+    <span class="meta"><span class="ok">✓ Stand Oktober 2026</span><span>3 Min.</span></span>
+  </div>
+</a></div></div></section>
 </article>
 </main>
 <footer>
-  <div class="wrap footer-grid">
-    <div>
-      <strong>Dein Kraftwerk</strong>
-      <p class="muted small">Der unabhängige Balkonkraftwerk-Ratgeber. Unabhängig, ohne Herstellerbindung, regelmäßig aktualisiert.</p>
-      <p class="muted small">* Links mit „Anzeige“ sind Affiliate-Links: Kaufst du darüber, erhalte ich eine kleine Provision. Für dich ändert sich am Preis nichts. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-brand"><span class="brand-mark"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#3a2a00"/></svg></span>Dein Kraftwerk</div>
+        <p class="small">Der unabhängige Balkonkraftwerk-Ratgeber. Unabhängig, ohne Herstellerbindung, jede Woche auf dem aktuellen Stand.</p>
+        <p class="small" style="opacity:.75">Links mit „Anzeige“ sind Affiliate-Links: Kaufst du darüber, erhalte ich eine kleine Provision. Für dich ändert sich am Preis nichts. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
+      </div>
+      <div><h4>Ratgeber</h4><ul>
+        <li><a href="/ratgeber/balkonkraftwerk-regeln-2026/">Regeln 2026</a></li>
+        <li><a href="/ratgeber/balkonkraftwerk-anmelden/">Anmeldung</a></li>
+        <li><a href="/ratgeber/balkonkraftwerk-kaufen-checkliste/">Kauf-Checkliste</a></li>
+        <li><a href="/ratgeber/balkonkraftwerk-speicher-lohnt-sich/">Speicher</a></li>
+        <li><a href="/ratgeber/">Alle Ratgeber</a></li></ul></div>
+      <div><h4>Werkzeuge</h4><ul>
+        <li><a href="/rechner/">Ertragsrechner</a></li>
+        <li><a href="/news/">News</a></li>
+        <li><a href="/buecher/">Bücher</a></li>
+        <li><a href="/news/feed.xml">RSS-Feed</a></li></ul></div>
+      <div><h4>Über uns</h4><ul>
+        <li><a href="/autor/">Über den Autor</a></li>
+        <li><a href="/so-arbeiten-wir/">So arbeiten wir</a></li>
+        <li><a href="https://www.instagram.com/dein.kraftwerk.buch/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/datenschutz/">Datenschutz</a></li></ul></div>
     </div>
-    <div class="footer-links">
-      <a href="/ratgeber/">Alle Ratgeber</a>
-      <a href="/rechner/">Ertragsrechner</a>
-      <a href="/news/">News</a>
-      <a href="/buecher/">Bücher</a>
-      <a href="/autor/">Über den Autor</a>
-      <a href="/so-arbeiten-wir/">So arbeiten wir</a>
-      <a href="https://www.instagram.com/dein.kraftwerk.buch/" target="_blank" rel="noopener">Instagram @dein.kraftwerk.buch</a>
-      <a href="/impressum/">Impressum</a>
-      <a href="/datenschutz/">Datenschutz</a>
-    </div>
+    <div class="f-bottom"><span>© 2026 Alexander Gerasch · Fotos: Unsplash</span><span>Zuletzt aktualisiert: 16. Oktober 2026</span></div>
   </div>
-  <div class="wrap muted small" style="margin-top:18px">© 2026 Alexander Gerasch · Zuletzt aktualisiert: 16. Oktober 2026</div>
 </footer>
 </body>
 </html>
