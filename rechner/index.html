@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balkonkraftwerk-Rechner: Ertrag, Ersparnis &amp; Amortisation | Dein Kraftwerk</title>
+<meta name="description" content="Kostenloser Balkonkraftwerk-Rechner: Schätze Jahresertrag, Ersparnis und Amortisation für deinen Balkon – mit Ausrichtung, Neigung, Strompreis und optionalem Speicher.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://kraftwerk-balkon.de/rechner/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Dein Kraftwerk">
+<meta property="og:title" content="Balkonkraftwerk-Rechner: Ertrag, Ersparnis &amp; Amortisation | Dein Kraftwerk">
+<meta property="og:description" content="Kostenloser Balkonkraftwerk-Rechner: Schätze Jahresertrag, Ersparnis und Amortisation für deinen Balkon – mit Ausrichtung, Neigung, Strompreis und optionalem Speicher.">
+<meta property="og:url" content="https://kraftwerk-balkon.de/rechner/">
+<meta property="og:image" content="https://kraftwerk-balkon.de/images/sammelband-cover.jpg">
+<meta name="theme-color" content="#123a56">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/style.css?v=2026-10-16">
+<link rel="alternate" type="application/rss+xml" title="Balkonkraftwerk-News" href="/news/feed.xml">
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="nav">
+  <a href="/" class="brand"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#F2C94C"/></svg><span>Dein Kraftwerk</span></a>
+  <nav class="navlinks" aria-label="Hauptnavigation"><a href="/ratgeber/">Ratgeber</a><a href="/rechner/" aria-current=page>Rechner</a><a href="/ratgeber/balkonkraftwerk-kaufen-checkliste/">Kaufberatung</a><a href="/news/">News</a><a href="/buecher/">Bücher</a></nav>
+</header>
+<main id="main">
+
+<section class="wrap page-head">
+  <span class="badge"><span class="dot"></span>Kostenlos · ohne Anmeldung · keine Datenspeicherung</span>
+  <h1>Balkonkraftwerk-Rechner</h1>
+  <p class="lead">Wie viel Strom erzeugt dein Balkonkraftwerk, wie viel sparst du – und wann hat es sich bezahlt gemacht? Stell die Werte für deinen Balkon ein.</p>
+</section>
+<section class="wrap">
+  <div class="calc">
+    <form class="card" id="calc" onsubmit="return false">
+      <label for="wp">Modulleistung gesamt (Wp)</label>
+      <select id="wp">
+        <option value="400">400 Wp (1 Modul)</option>
+        <option value="800">800 Wp (2 × 400)</option>
+        <option value="900" selected>900 Wp (2 × 450)</option>
+        <option value="960">960 Wp (Schuko-Maximum)</option>
+        <option value="1600">1.600 Wp (4 × 400, Wieland nötig)</option>
+        <option value="2000">2.000 Wp (Maximum, Wieland nötig)</option>
+      </select>
+      <label for="dir">Ausrichtung</label>
+      <select id="dir">
+        <option value="s">Süd</option><option value="so">Südost / Südwest</option><option value="ow">Ost oder West</option><option value="osw">Ost-West geteilt</option><option value="n">Nord</option>
+      </select>
+      <label for="tilt">Montage</label>
+      <select id="tilt">
+        <option value="90">Senkrecht am Geländer</option><option value="30">Schräg aufgeständert (ca. 30°)</option><option value="0">Flach liegend</option>
+      </select>
+      <label for="shade">Verschattung</label>
+      <select id="shade">
+        <option value="1">Keine</option><option value="0.9">Leicht (z. B. morgens)</option><option value="0.75">Mittel</option><option value="0.55">Stark</option>
+      </select>
+      <label for="region">Region</label>
+      <select id="region">
+        <option value="0.95">Norddeutschland</option><option value="1" selected>Mitte</option><option value="1.07">Süddeutschland</option>
+      </select>
+      <label for="load">Wer ist tagsüber zu Hause?</label>
+      <select id="load">
+        <option value="0.42">Meist niemand (nur Kühlschrank &amp; Standby)</option>
+        <option value="0.55" selected>Teilweise / Homeoffice an manchen Tagen</option>
+        <option value="0.7">Fast immer jemand, viele Geräte laufen tagsüber</option>
+      </select>
+      <label for="price">Strompreis (ct/kWh)</label>
+      <input id="price" type="number" min="10" max="80" step="0.5" value="35">
+      <div class="hint">Steht als „Arbeitspreis“ auf deiner Stromrechnung.</div>
+      <label for="cost">Anschaffungskosten (€)</label>
+      <input id="cost" type="number" min="0" max="10000" step="10" value="400">
+      <label for="bat">Speicher</label>
+      <select id="bat">
+        <option value="0">Kein Speicher</option><option value="1">ca. 1 kWh</option><option value="1.6">ca. 1,6–2 kWh</option><option value="2.7">ca. 2,5–3 kWh</option>
+      </select>
+      <div class="hint">Speicherkosten bei den Anschaffungskosten mit eintragen.</div>
+    </form>
+    <div>
+      <div class="result" aria-live="polite">
+        <div class="small">Geschätzte Ersparnis pro Jahr</div>
+        <div class="big" id="r-save">–</div>
+        <dl>
+          <dt>Jahresertrag</dt><dd id="r-yield">–</dd>
+          <dt>davon selbst verbraucht</dt><dd id="r-self">–</dd>
+          <dt>Eigenverbrauchsquote</dt><dd id="r-quote">–</dd>
+          <dt>Amortisation</dt><dd id="r-payback">–</dd>
+          <dt>Ersparnis in 20 Jahren</dt><dd id="r-20">–</dd>
+          <dt>CO₂ vermieden pro Jahr</dt><dd id="r-co2">–</dd>
+        </dl>
+        <p class="small" id="r-hint" style="margin-top:14px;color:#d5e3ee"></p>
+      </div>
+      <div class="card small" style="margin-top:16px">
+        <strong>So rechnen wir:</strong> Ertrag = Modulleistung × spezifischer Ertrag (Richtwerte je Ausrichtung/Neigung, ca. 1.000 kWh/kWp bei Süd 30°) × Region × Verschattung, abzüglich Begrenzungsverlusten durch die 800-W-Grenze bei großer Modulleistung. Eigenverbrauch nach typischen Lastprofilen, mit Speicher zusätzlich verschobene Energie (150–250 Zyklen/Jahr, 90 % Wirkungsgrad). Strompreissteigerungen sind nicht eingerechnet. Alle Werte sind Schätzungen – für genaue Standortprognosen empfehlen wir <a href="https://re.jrc.ec.europa.eu/pvg_tools/de/" target="_blank" rel="noopener">PVGIS</a>.
+      </div>
+    </div>
+  </div>
+  <div class="narrow">
+    <div class="product-grid"><div class="product">
+  <strong>Komplettset 800 W (2 Module + Wechselrichter)</strong>
+  <p>Der einfachste Einstieg: alles in einem Paket, passend zur 800-W-Grenze. Auf Schuko-Stecker mit Normhinweis DIN VDE V 0126-95 achten.</p>
+  <a href="https://www.amazon.de/s?k=Balkonkraftwerk+800W+Komplettset&amp;tag=feinerbengel-21" class="btn btn-ghost" target="_blank" rel="sponsored noopener">Angebote bei Amazon vergleichen <span class="tag-ad">Anzeige</span></a>
+</div><div class="product">
+  <strong>Balkonkraftwerk-Set mit Speicher</strong>
+  <p>Sinnvoll, wenn mittags niemand zu Hause ist und viel Strom ungenutzt ins Netz fließt.</p>
+  <a href="https://www.amazon.de/s?k=Balkonkraftwerk+mit+Speicher+Set&amp;tag=feinerbengel-21" class="btn btn-ghost" target="_blank" rel="sponsored noopener">Angebote bei Amazon vergleichen <span class="tag-ad">Anzeige</span></a>
+</div><div class="product">
+  <strong>Aufständerung für Flachdach, Garage oder Garten</strong>
+  <p>Mit 20–30° Neigung holst du deutlich mehr Ertrag als senkrecht am Geländer.</p>
+  <a href="https://www.amazon.de/s?k=Solarmodul+Aufst%C3%A4nderung+Flachdach+Balkonkraftwerk&amp;tag=feinerbengel-21" class="btn btn-ghost" target="_blank" rel="sponsored noopener">Angebote bei Amazon vergleichen <span class="tag-ad">Anzeige</span></a>
+</div></div>
+    <aside class="book-box">
+  <img src="/images/band1-cover.jpg" alt="Cover: Dein eigenes Kraftwerk am Geländer" width="110" height="165" loading="lazy">
+  <div>
+    <span class="kicker">STUFE 1 · EINSTEIGER · Buch von Alexander Gerasch</span>
+    <h3>Dein eigenes Kraftwerk am Geländer</h3>
+    <p>Technik und Komponenten, Anmeldung im Marktstammdatenregister, Mietrecht und Versicherung, Standortplanung, Installation und Wirtschaftlichkeit – Schritt für Schritt bis zur ersten eigenen Kilowattstunde.</p>
+    <p class="muted small">Für alle, die noch kein Balkonkraftwerk haben oder gerade eins gekauft haben.</p>
+    <a href="https://www.amazon.de/dp/B0GHZGVGWY?tag=feinerbengel-21" class="btn btn-primary" target="_blank" rel="sponsored noopener">Als E-Book bei Amazon ansehen <span class="tag-ad">Anzeige</span></a>
+  </div>
+</aside>
+  </div>
+</section>
+<script src="/js/rechner.js" defer></script>
+
+</main>
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <strong>Dein Kraftwerk</strong>
+      <p class="muted small">Der unabhängige Balkonkraftwerk-Ratgeber. Unabhängig, ohne Herstellerbindung, regelmäßig aktualisiert.</p>
+      <p class="muted small">* Links mit „Anzeige“ sind Affiliate-Links: Kaufst du darüber, erhalte ich eine kleine Provision. Für dich ändert sich am Preis nichts. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/ratgeber/">Alle Ratgeber</a>
+      <a href="/rechner/">Ertragsrechner</a>
+      <a href="/news/">News</a>
+      <a href="/buecher/">Bücher</a>
+      <a href="/autor/">Über den Autor</a>
+      <a href="/so-arbeiten-wir/">So arbeiten wir</a>
+      <a href="https://www.instagram.com/dein.kraftwerk.buch/" target="_blank" rel="noopener">Instagram @dein.kraftwerk.buch</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+    </div>
+  </div>
+  <div class="wrap muted small" style="margin-top:18px">© 2026 Alexander Gerasch · Zuletzt aktualisiert: 16. Oktober 2026</div>
+</footer>
+</body>
+</html>
