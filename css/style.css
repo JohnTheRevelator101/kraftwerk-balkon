@@ -332,3 +332,9 @@ details.menu{border:0;padding:0;margin:0;background:none}
 .sb-social a{padding:9px 16px;border-radius:999px;background:#fff;color:var(--ink);text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--line)}
 .sb-note{text-align:center;font-size:12.5px;color:var(--muted);margin:0}
 @media (max-width:420px){.sb-hero{flex-direction:column;text-align:center}.sb-hero img{width:130px}.sb-books{gap:8px}.sb-book{padding:8px}}
+
+/* /start/: schlanke Link-in-Bio-Ansicht ohne Seitenkopf und großen Footer */
+body:has(.sb) .site-header,body:has(.sb) footer .f-grid{display:none}
+body:has(.sb) footer{padding-top:18px;padding-bottom:18px}
+.sb-note a{color:inherit;text-decoration:underline}
+.sb-book strong{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:anywhere}
