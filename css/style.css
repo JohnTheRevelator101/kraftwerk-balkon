@@ -379,3 +379,23 @@ body:has(.sb) footer{padding-top:18px;padding-bottom:18px}
 .tc-text strong{font-size:19px}
 .tc-text span:last-child{color:var(--muted);font-size:15px}
 @media (max-width:700px){.tool-callout{flex-direction:column;align-items:flex-start}}
+/* Suche (seit 04.11.2026) */
+.search-btn{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line);color:var(--ink);background:#fff;flex:none}
+.search-btn:hover{border-color:var(--ink)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.site-search{display:flex;align-items:center;gap:8px;border:2px solid var(--line);border-radius:999px;padding:6px 6px 6px 16px;background:#fff;transition:border-color .15s}
+.site-search:focus-within{border-color:var(--ink)}
+.site-search .ss-ic{color:var(--muted);display:grid;flex:none}
+.site-search input{flex:1;min-width:0;border:0;outline:0;font:inherit;font-size:17px;background:none;padding:8px 2px;color:var(--ink)}
+.site-search input::-webkit-search-cancel-button{cursor:pointer}
+.site-search .btn{flex:none}
+.search-results{margin-top:14px;display:grid;gap:10px}
+.sr-info{margin:4px 0}
+.sr{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:var(--r-s);padding:14px 18px;background:#fff}
+.sr:hover{border-color:var(--ink)}
+.sr-k{display:block;font-size:12.5px;font-weight:700;color:var(--green-2);text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
+.sr strong{display:block;font-size:18px;line-height:1.3}
+.sr p{margin:6px 0 0;font-size:15px;color:var(--ink-2);line-height:1.55}
+.sr mark{background:var(--sun-2);color:inherit;border-radius:3px;padding:0 1px}
+@media (max-width:520px){.site-search .btn{display:none}.site-search{padding-right:14px}}
+@media (min-width:961px) and (max-width:1120px){.navlinks a{padding:9px 10px;font-size:15px}}
