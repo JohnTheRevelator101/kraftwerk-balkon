@@ -399,3 +399,82 @@ body:has(.sb) footer{padding-top:18px;padding-bottom:18px}
 .sr mark{background:var(--sun-2);color:inherit;border-radius:3px;padding:0 1px}
 @media (max-width:520px){.site-search .btn{display:none}.site-search{padding-right:14px}}
 @media (min-width:961px) and (max-width:1120px){.navlinks a{padding:9px 10px;font-size:15px}}
+
+/* Theme „Buch“: Papierton, Dunkelblau, klassische Buchschrift (Entwurf 05.11.2026) */
+@font-face{font-family:"Newsreader";src:url(/fonts/newsreader-latin-wght-normal.woff2) format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Newsreader";src:url(/fonts/newsreader-latin-wght-italic.woff2) format("woff2");font-weight:200 800;font-style:italic;font-display:swap}
+:root{
+  --ink:#1d2b4f; --ink-2:#4a5672; --muted:#6b7487;
+  --bg:#fbf8f2; --soft:#f3eee3; --mint:#ece5d6; --line:#e3dccd;
+  --sun:#d9a441; --sun-2:#f1dcae; --sun-ink:#1d2b4f;
+  --green:#a3541c; --green-2:#8a4416; --sky:#eef1f7;
+  --accent:#a3541c;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --shadow:0 1px 2px rgba(29,43,79,.06),0 8px 24px rgba(29,43,79,.06);
+  --shadow-l:0 24px 60px rgba(29,43,79,.14);
+  --r:14px; --r-l:20px; --r-s:10px;
+}
+body{background:var(--bg)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1.12}
+h1{font-weight:500;font-size:clamp(38px,5.6vw,66px)}
+.hl{background:none;font-style:italic;color:var(--accent);padding:0}
+/* Header */
+.site-header{background:rgba(251,248,242,.9);border-bottom:1px solid var(--line)}
+.brand{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:0}
+.brand-mark{background:var(--ink);box-shadow:none;border-radius:50%}
+.brand-mark svg path{fill:var(--sun)}
+.navlinks a:hover,.navlinks a[aria-current]{background:var(--soft)}
+/* Buttons */
+.btn{border-radius:8px}
+.btn-primary{background:var(--ink);color:#fbf8f2;box-shadow:none}
+.btn-primary:hover{background:#2a3b66;color:#fbf8f2}
+.btn-dark{background:var(--ink)}
+.btn-dark:hover{background:#2a3b66}
+.btn-ghost{background:transparent;border-color:#cfc6b2}
+/* Hero */
+.hero::before{background:radial-gradient(closest-side,rgba(217,164,65,.16),transparent)}
+.eyebrow{background:var(--soft);color:var(--ink-2)}
+.eyebrow .dot{background:var(--accent);box-shadow:0 0 0 4px rgba(163,84,28,.15)}
+.check{background:var(--mint)}
+.check svg path,.check svg{stroke:var(--accent)}
+.hero-photo{border-radius:var(--r-l)}
+.float{background:#fffdf8;border-radius:12px}
+.float b{font-family:var(--serif);font-weight:600}
+.fact{background:var(--soft);border:1px solid var(--line)}
+.fact b{font-family:var(--serif);font-weight:600}
+.kicker{color:var(--accent)}
+/* Kacheln, Karten */
+.tile::after{background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(18,27,52,.86))}
+.tile b{font-family:var(--serif);font-weight:600;font-size:26px}
+.acard{background:#fffdf8}
+.acard strong{font-family:var(--serif);font-weight:600;font-size:21px;letter-spacing:0}
+.acard .meta .ok{color:var(--accent)}
+.chip{background:transparent}
+.chip:hover{background:var(--soft)}
+.band::after{background:linear-gradient(100deg,rgba(18,27,52,.93) 0%,rgba(18,27,52,.72) 50%,rgba(18,27,52,.15))}
+.band p,.band-stats div span{color:#d5dbea}
+.band-stats div b{font-family:var(--serif);color:#f1c77a}
+.books-sec{background:linear-gradient(180deg,#f3eee3,var(--bg))}
+.step{background:#fffdf8}
+.news-item{background:#fffdf8}
+.news-item time{color:var(--accent)}
+.tool-callout,.card,.product,.book-card,details,.tbl{background:#fffdf8}
+.callout{background:var(--ink)}
+.result{background:var(--ink)}
+/* Footer */
+footer{background:#18233f;color:#c3c9d8}
+footer a:hover{color:#f1c77a}
+.f-brand{font-family:var(--serif);font-weight:600}
+.page-hero::after{background:linear-gradient(90deg,rgba(18,27,52,.9),rgba(18,27,52,.5))}
+.page-hero .eyebrow .dot{background:#f1c77a}
+.search-btn{background:transparent}
+.sr mark{background:var(--sun-2)}
+/* Buch-Theme: Ergänzungen für /start/ und Details */
+.sb{background:radial-gradient(1200px 500px at 50% -120px,#f1e4c6,transparent),var(--soft)}
+.sb-hero{background:linear-gradient(135deg,#1d2b4f,#2c3e6b)}
+.sb-hero p{color:#d5dbea}
+.sb-hero strong,.sb-head h1{font-family:var(--serif);font-weight:600}
+.sb-quiz{background:#fffdf8}
+.sb-opts button:hover,.sb-opts button.on{border-color:var(--accent);background:var(--mint)}
+.float .ic{background:var(--soft)!important}
+.vorlage .letter,.letter{background:#fffdf8}
