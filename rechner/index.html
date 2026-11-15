@@ -21,7 +21,7 @@
 <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/style.css?v=202611151341">
+<link rel="stylesheet" href="/css/style.css?v=202611151346">
 <link rel="alternate" type="application/rss+xml" title="Balkonkraftwerk-News" href="/news/feed.xml">
 </head>
 <body>
@@ -48,13 +48,22 @@
     <form id="calc" onsubmit="return false">
       <label for="wp">Modulleistung gesamt (Wp)</label>
       <select id="wp">
-        <option value="400">400 Wp (1 Modul)</option>
-        <option value="800">800 Wp (2 × 400)</option>
-        <option value="900" selected>900 Wp (2 × 450)</option>
-        <option value="960">960 Wp (Schuko-Maximum)</option>
-        <option value="1600">1.600 Wp (4 × 400, Wieland nötig)</option>
-        <option value="2000">2.000 Wp (Maximum, Wieland nötig)</option>
+        <optgroup label="Standardmodule (ca. 1,75 × 1,15 m)">
+        <option value="400" data-n="1" data-typ="std">400 Wp (1 Modul)</option>
+        <option value="800" data-n="2" data-typ="std">800 Wp (2 × 400)</option>
+        <option value="900" data-n="2" data-typ="std" selected>900 Wp (2 × 450)</option>
+        <option value="960" data-n="2" data-typ="std">960 Wp (Schuko-Maximum)</option>
+        <option value="1600" data-n="4" data-typ="std">1.600 Wp (4 × 400, Wieland nötig)</option>
+        <option value="2000" data-n="0" data-typ="std">2.000 Wp (Maximum, Wieland nötig)</option>
+        </optgroup>
+        <optgroup label="Kompaktmodule 200 Wp (ca. 1,16 × 0,77 m) – für kleine Balkone">
+        <option value="200" data-n="1" data-typ="kompakt">200 Wp (1 × 200)</option>
+        <option value="400" data-n="2" data-typ="kompakt">400 Wp (2 × 200)</option>
+        <option value="600" data-n="3" data-typ="kompakt">600 Wp (3 × 200)</option>
+        <option value="800" data-n="4" data-typ="kompakt">800 Wp (4 × 200)</option>
+        </optgroup>
       </select>
+      <div class="hint">Kleiner Balkon? Kompaktmodule brauchen hochkant nur ca. 77 cm Geländer pro Modul – <a href="/ratgeber/balkonkraftwerk-kleiner-balkon/">mehr dazu</a>.</div>
       <label for="dir">Ausrichtung</label>
       <select id="dir">
         <option value="s">Süd</option><option value="so">Südost / Südwest</option><option value="ow">Ost oder West</option><option value="osw">Ost-West geteilt</option><option value="n">Nord</option>
@@ -99,11 +108,13 @@
           <dt>Amortisation</dt><dd id="r-payback">–</dd>
           <dt>Ersparnis in 20 Jahren</dt><dd id="r-20">–</dd>
           <dt>CO₂ vermieden pro Jahr</dt><dd id="r-co2">–</dd>
+          <dt>Platz am Geländer (hochkant)</dt><dd id="r-platz">–</dd>
+          <dt>Gewicht der Module</dt><dd id="r-kg">–</dd>
         </dl>
         <p class="small" id="r-hint" style="margin-top:14px;color:#d5e3ee"></p>
       </div>
       <div class="card small" style="margin-top:16px;font-size:14px;line-height:1.6">
-        <strong>So rechnen wir:</strong> Ertrag = Modulleistung × spezifischer Ertrag (Richtwerte je Ausrichtung/Neigung, ca. 1.000 kWh/kWp bei Süd 30°) × Region × Verschattung, abzüglich Begrenzungsverlusten durch die 800-W-Grenze bei großer Modulleistung. Eigenverbrauch nach typischen Lastprofilen, mit Speicher zusätzlich verschobene Energie (150–250 Zyklen/Jahr, 90 % Wirkungsgrad). Strompreissteigerungen sind nicht eingerechnet. Alle Werte sind Schätzungen – für genaue Standortprognosen empfehlen wir <a href="https://re.jrc.ec.europa.eu/pvg_tools/de/" target="_blank" rel="noopener">PVGIS</a>.
+        <strong>So rechnen wir:</strong> Ertrag = Modulleistung × spezifischer Ertrag (Richtwerte je Ausrichtung/Neigung, ca. 1.000 kWh/kWp bei Süd 30°) × Region × Verschattung, abzüglich Begrenzungsverlusten durch die 800-W-Grenze bei großer Modulleistung. Eigenverbrauch nach typischen Lastprofilen, mit Speicher zusätzlich verschobene Energie (150–250 Zyklen/Jahr, 90 % Wirkungsgrad). Platz und Gewicht sind Richtwerte: Standardmodul ca. 1,15 m breit und über 20 kg, Kompaktmodul ca. 0,77 m breit und 6–8 kg, jeweils zzgl. Abstand für die Klemmen. Strompreissteigerungen sind nicht eingerechnet. Alle Werte sind Schätzungen – für genaue Standortprognosen empfehlen wir <a href="https://re.jrc.ec.europa.eu/pvg_tools/de/" target="_blank" rel="noopener">PVGIS</a>.
       </div>
     </div>
   </div>
@@ -114,6 +125,11 @@
   <strong>Komplettset 800 W (2 Module + Wechselrichter)</strong>
   <p>Der einfachste Einstieg: alles in einem Paket, passend zur 800-W-Grenze. Auf Schuko-Stecker mit Normhinweis DIN VDE V 0126-95 achten.</p>
   <a href="https://www.amazon.de/s?k=Balkonkraftwerk+800W+Komplettset&amp;tag=feinerbengel-21" class="btn btn-ghost btn-sm" target="_blank" rel="sponsored noopener">Angebote vergleichen <span class="tag-ad">Anzeige</span></a>
+</div><div class="product">
+  <span class="p-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0c6b41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L22 7H6"/></svg></span>
+  <strong>Balkonkraftwerk-Set mit kompakten 200-Wp-Modulen</strong>
+  <p>Für kleine Balkone: Module, Wechselrichter und Halterung vom Hersteller aufeinander abgestimmt. Auf Schuko-Stecker mit Normhinweis DIN VDE V 0126-95 achten.</p>
+  <a href="https://www.amazon.de/s?k=Balkonkraftwerk+Set+kleiner+Balkon+200W+Module&amp;tag=feinerbengel-21" class="btn btn-ghost btn-sm" target="_blank" rel="sponsored noopener">Angebote vergleichen <span class="tag-ad">Anzeige</span></a>
 </div><div class="product">
   <span class="p-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0c6b41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L22 7H6"/></svg></span>
   <strong>Balkonkraftwerk-Set mit Speicher</strong>

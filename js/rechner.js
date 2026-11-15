@@ -15,6 +15,8 @@
     var shade = +$("shade").value, region = +$("region").value, load = +$("load").value;
     var price = (+$("price").value || 0) / 100, cost = +$("cost").value || 0, bat = +$("bat").value;
 
+    var opt = $("wp").options[$("wp").selectedIndex];
+    var n = +(opt.getAttribute("data-n") || 0), typ = opt.getAttribute("data-typ") || "std";
     var spec = SPEC[dir][tilt];
     // Begrenzungsverlust durch 800-W-Wechselrichter (Überbelegung); Ost-West verteilt Spitzen
     var r = wp / 800, clip = 0;
@@ -43,7 +45,15 @@
     $("r-20").textContent = fmt(save * 20 - cost) + " €";
     $("r-co2").textContent = "ca. " + fmt(yieldKwh * 0.36) + " kg";
 
+    if (n > 0) {
+      var breite = typ === "kompakt" ? 0.77 : 1.15;
+      $("r-platz").textContent = "ca. " + fmt(n * breite + (n - 1) * 0.02, 1) + " m";
+      $("r-kg").textContent = typ === "kompakt" ? "ca. " + fmt(n * 6) + "–" + fmt(n * 8) + " kg" : "über " + fmt(n * 20) + " kg";
+    } else { $("r-platz").textContent = "–"; $("r-kg").textContent = "–"; }
+
     var hint = "";
+    if (typ === "kompakt" && n === 1) hint += "Ein einzelnes Kompaktmodul rechnet sich schwer, weil Wechselrichter und Halterung fast so viel kosten wie bei zwei Modulen. ";
+    if (typ === "kompakt" && n >= 3) hint += "Bei 3–4 Kompaktmodulen müssen sich je zwei einen Wechselrichter-Eingang teilen: Datenblätter von Modul und Wechselrichter abgleichen oder ein abgestimmtes Set nehmen. ";
     if (wp > 960) hint = "Über 960 Wp brauchst du eine Einspeisesteckdose (z. B. Wieland), installiert von einer Elektrofachkraft. ";
     if (dir === "n" && tilt === 90) hint += "Ein senkrechter Nordbalkon bringt sehr wenig – prüf Alternativen wie Garten oder Flachdach. ";
     if (bat > 0 && shifted < bat * 120) hint += "Dein Speicher wird selten voll – ein kleinerer Speicher oder keiner könnte wirtschaftlicher sein. ";
