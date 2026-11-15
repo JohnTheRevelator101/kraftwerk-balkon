@@ -12,6 +12,8 @@
     var anschluss = wp > 960
       ? 'Der Anschluss erfolgt über eine Energiesteckvorrichtung (Einspeisesteckdose), die von einer Elektrofachkraft installiert wird.'
       : 'Der Anschluss erfolgt über eine vorhandene, fest installierte Steckdose.';
+    var typ = $('typ') ? $('typ').value : 'std';
+    var groesse = typ === 'kompakt' ? ' Es handelt sich um kompakte Module mit je ca. 116 × 77 cm und ca. 6–8 kg und damit deutlich leichter als übliche Module.' : '';
     var bohr = $('bohr').value === 'nein' ? 'Bohrungen in Fassade oder Brüstung sind nicht vorgesehen.' : 'Die genaue Befestigung stimme ich gern vorab mit Ihnen ab.';
     var L = [];
     L.push(v('name', '[Dein Name]'));
@@ -23,7 +25,7 @@
     L.push('');
     L.push('Sehr geehrte Damen und Herren,');
     L.push('');
-    L.push('ich möchte an meinem Balkon ein Steckersolargerät („Balkonkraftwerk“) mit ' + mods + ' (zusammen ' + (wp ? wp.toLocaleString('de-DE') : '…') + ' Wp) und einem Wechselrichter mit höchstens 800 W anbringen. Die Module werden mit einer sturmsicheren Halterung ' + MONT[$('mont').value] + ' befestigt. ' + bohr + ' ' + anschluss);
+    L.push('ich möchte an meinem Balkon ein Steckersolargerät („Balkonkraftwerk“) mit ' + mods + ' (zusammen ' + (wp ? wp.toLocaleString('de-DE') : '…') + ' Wp) und einem Wechselrichter mit höchstens 800 W anbringen. Die Module werden mit einer sturmsicheren Halterung ' + MONT[$('mont').value] + ' befestigt.' + groesse + ' ' + bohr + ' ' + anschluss);
     var ext = [];
     if ($('norm').checked) ext.push('Das Gerät entspricht laut Hersteller der Produktnorm DIN VDE V 0126-95.');
     if ($('hpv').checked) ext.push('Eine Privathaftpflichtversicherung, die das Gerät abdeckt, ist vorhanden.');
@@ -41,6 +43,9 @@
     return L.join('\n');
   }
   function render() { $('letter').textContent = text(); }
+  var JE = { std: 450, kompakt: 200 };
+  function vorschlag() { var t = $('typ').value; if (JE[t]) $('wp').value = (+$('mod').value) * JE[t]; }
+  if ($('typ')) { $('typ').addEventListener('change', vorschlag); $('mod').addEventListener('change', function () { vorschlag(); render(); }); }
   document.getElementById('vl').addEventListener('input', render);
   document.getElementById('vl').addEventListener('change', render);
   $('copy').addEventListener('click', function () {

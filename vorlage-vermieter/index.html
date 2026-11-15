@@ -21,7 +21,7 @@
 <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/style.css?v=202611151346">
+<link rel="stylesheet" href="/css/style.css?v=202611151349">
 <link rel="alternate" type="application/rss+xml" title="Balkonkraftwerk-News" href="/news/feed.xml">
 </head>
 <body>
@@ -57,11 +57,18 @@
       <input id="name" type="text" placeholder="Vor- und Nachname">
       <label for="adr">Deine Anschrift und Lage der Wohnung</label>
       <input id="adr" type="text" placeholder="z. B. Musterstraße 1, 12345 Musterstadt, 2. OG links">
+      <label for="typ">Modulgröße</label>
+      <select id="typ">
+        <option value="std" selected>Standardmodule (ca. 1,75 × 1,15 m, meist 400–500 Wp)</option>
+        <option value="kompakt">Kompaktmodule 200 Wp (ca. 1,16 × 0,77 m, je ca. 6–8 kg)</option>
+        <option value="andere">Andere – Leistung selbst eintragen</option>
+      </select>
+      <div class="hint">Kleiner Balkon? <a href="/ratgeber/balkonkraftwerk-kleiner-balkon/">Kompaktmodule mit 200 Wp</a> brauchen hochkant nur ca. 77 cm Geländer pro Modul.</div>
       <label for="mod">Anzahl der Module</label>
       <select id="mod"><option value="1">1 Modul</option><option value="2" selected>2 Module</option><option value="3">3 Module</option><option value="4">4 Module</option></select>
       <label for="wp">Modulleistung gesamt (Wp)</label>
       <input id="wp" type="number" min="100" max="2000" step="10" value="900">
-      <div class="hint">Steht auf dem Typenschild der Module, z. B. 2 × 450 Wp = 900 Wp. Bis 960 Wp genügt die normale Steckdose.</div>
+      <div class="hint">Wird aus Modulgröße und Anzahl vorgeschlagen (Standard: 450 Wp, Kompakt: 200 Wp je Modul). Bitte mit dem Typenschild bzw. Datenblatt abgleichen und bei Bedarf ändern, z. B. 2 × 450 Wp = 900 Wp oder 4 × 200 Wp = 800 Wp. Bis 960 Wp genügt die normale Steckdose.</div>
       <label for="mont">Geplante Montage</label>
       <select id="mont">
         <option value="offen" selected>am Balkongeländer – Details nach Absprache</option>
